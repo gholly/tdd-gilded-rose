@@ -1,7 +1,17 @@
 package cn.xpbootcamp.gilded_rose;
 
+import java.time.LocalDate;
+
 public class Sulfuras extends Goods {
-    public Sulfuras(int quality) {
+
+    private LocalDate sellIn;
+
+    public Sulfuras(int quality, LocalDate sellIn) {
         super(quality);
+        this.sellIn = sellIn;
+    }
+
+    public int getQuality() {
+        return super.getQuality();
     }
 }
