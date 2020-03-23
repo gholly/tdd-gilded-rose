@@ -3,7 +3,6 @@ package cn.xpbootcamp.gilded_rose;
 import java.time.LocalDate;
 
 public class BackstagePass extends Goods {
-    private LocalDate sellIn;
     private LocalDate performanceDay;
 
     public BackstagePass(int quality, LocalDate sellIn, LocalDate performanceDay) {
@@ -27,10 +26,10 @@ public class BackstagePass extends Goods {
 
     public int getQuality() {
         int value = super.getQuality();
-        if (sellIn.isAfter(performanceDay)) {
+        if (super.getSellIn().isAfter(performanceDay)) {
             return 0;
         }
-        int days = sellIn.until(performanceDay).getDays();
+        int days = super.getSellIn().until(performanceDay).getDays();
         if (days > 5 && days <= 10) {
             value = super.getQuality() + 2 * (10 - days);
         }
