@@ -29,7 +29,7 @@ public class BackstagePass extends Goods {
     public int getQuality() {
         int value = super.getQuality();
         if (sellIn.isAfter(performanceDay)) {
-            value = 0;
+            return 0;
         }
         int days = sellIn.until(performanceDay).getDays();
         if (days > 5 && days <= 10) {
