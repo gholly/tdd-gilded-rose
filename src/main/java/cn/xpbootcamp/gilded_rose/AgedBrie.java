@@ -3,14 +3,13 @@ package cn.xpbootcamp.gilded_rose;
 import java.time.LocalDate;
 
 public class AgedBrie extends Goods {
-    private LocalDate sellIn;
 
-    public AgedBrie(int quality) {
-        super(quality);
+    public AgedBrie(int quality, LocalDate sellIn) {
+        super(quality, sellIn);
     }
 
 
     public int getQuality() {
-        return 0;
+        return super.getQuality();
     }
 }

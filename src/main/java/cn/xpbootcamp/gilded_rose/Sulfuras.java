@@ -4,11 +4,8 @@ import java.time.LocalDate;
 
 public class Sulfuras extends Goods {
 
-    private LocalDate sellIn;
-
     public Sulfuras(int quality, LocalDate sellIn) {
-        super(quality);
-        this.sellIn = sellIn;
+        super(quality,sellIn);
     }
 
     public int getQuality() {

@@ -7,9 +7,8 @@ public class BackstagePass extends Goods {
     private LocalDate performanceDay;
 
     public BackstagePass(int quality, LocalDate sellIn, LocalDate performanceDay) {
-        super(quality);
+        super(quality,sellIn);
         this.performanceDay = performanceDay;
-        this.sellIn = sellIn;
     }
 
     /**
